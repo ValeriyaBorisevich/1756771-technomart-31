@@ -1,0 +1,341 @@
+:root {
+  --basic-red: #EE3643;
+  --basic-green: #63A63E;
+  --basic-grey: #3D546F;
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --background-additional: #F9F5F0;
+  --white: #FFFFFF;
+  --special-yellow: #FFBF47;
+  --special-blue: #3BBCE3;
+  --special-lilac: #DC91D8;
+  --special-greenlight: #8ED78F;
+  --special-yellowlight: #FFD180;
+  --success: #5FBB2D;
+  --warning: #FFBF47;
+  --error: #BA2732;
+  --black: #000000;
+  --background-special: #32425C;
+  --background-special-dark: #293449;
+  --border-grey: #EAEAEA; 
+  --price-grey: #A9A9A9;
+  /* --white-transparent: , mix-blend-mode: normal, opacity: 0.3; - Попробовала записать так, но не особо вышло) Интересно вобще можно нечто такое делать? 
+  А ведь еще градиент есть */
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  text-transform: none;
+  background-color: var(--white);
+  background-image: none;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.button {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--basic-red);
+  width: 192px;
+  height: 38px;
+  display: block;
+  text-transform: uppercase;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  /* Где-то на этом этапе засомневалась в расставлении классов и вообще тегов, где лучше линк, гле баттон? :( */
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  display: none;
+}
+
+.list {
+  list-style: none;
+}
+
+/* header */
+
+.page-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--basic-background);
+}
+
+.menu {
+  background-color: var(--background-special-dark);
+  color: var(--white);
+}
+
+.header-navigation {
+  background-color: var(--background-special);
+  color: var(--white);
+}
+
+.link-order {
+  background-color: var(--success);
+  display: block;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  /* здесь я хотела добавить vertical-align, а он-то только для инлайновых эелементов... в итоге, сомневаюсь вообще в этом способе, 
+    мб надо как оборачивать ссылку или еще что-то? */
+}
+
+.header-company-info .info-text {
+  color: var(--basic-red);
+  font-family: "Cuprum", Arial, sans-serif;
+  /* Нужно ли добавлять вот так Arial каждый раз? Или достаточно только в body? */
+  font-style: italic;
+}
+
+.link-phone-header {
+  border: 3px solid var(--white);
+  color: var(--basic-red);
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.header-address {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--background-special);
+}
+
+.user-menu .link {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+/* offers */
+
+.offers-box {
+  width: 300px;
+  height: 123px;
+}
+
+.title-offers {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+/* Здесь я пытаюсь задать полупрозрачный фон кнопкам, хотела подвинуть кнопки поверх этого фона, но не знаю как, и так ли нужно делать вообще Ж( */
+
+.button-offers-background {
+  background-color: var(--white);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  width: 135px;
+  height: 38px;
+}
+
+.button-offers {
+  color: var(--white);
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.offers-box-materials {
+  background-color: var(--special-yellow);
+}
+
+.offers-box-tools {
+  background-color: var(--special-blue);
+}
+
+.offers-box-tech {
+  background-color: var(--special-lilac);
+}
+
+.offers-box-sale {
+  background-color: var(--special-greenlight);
+}
+
+.offers-box-delivery {
+  background-color: var(--special-yellow);
+}
+
+.slide-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--white);
+}
+
+.slide-text {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+
+/* popular goods and brands */
+
+.popular-wrapper {
+  background-color: var(--background-additional);
+}
+
+.title-goods, .title-brands {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.list-goods-item {
+  width: 220px;
+  height: 318px;
+  border: 1px solid var(--border-grey);
+  text-align: center;
+}
+
+.link-goods {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.price-previous {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--price-grey);
+}
+
+.price-current {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--basic-red);
+}
+
+.list-brands-item {
+  width: 220px;
+  height: 145px;
+  border: 1px solid var(--border-grey);
+}
+
+/* services */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.title-section {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.tab-title {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--background-special);
+}
+
+/* Здесь я поняла, что у кнопок два состояния же, нажато и нет, и пока не понимаю, как это реализовать. Наверное, нужно передлать разметку еще понадобится? */
+.tablinks-button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--background-special);
+  background-color: var(--white);
+}
+
+/* shop-info */
+
+.delivery-companies {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--black);
+  list-style-image: url("img/dash.png"); /* почти, но не то %) */    
+}
+
+/* footer */
+
+.page-footer {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer-wrapper {
+  background-color: var(--background-special);
+}
+
+.footer-wrapper-lower {
+  background-color: var(--background-special-dark);
+}
+
+.footer-contacts {
+  color: var(--white);
+}
+
+.link-additional { 
+  color: var(--special-yellowlight);
+}
+
+.copyright, .title-feedback, .text-developed {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.link-mail, .link-developed {
+  font-size: 16px;
+  line-height: 18px; 
+  color: var(--special-yellowlight);  
+}

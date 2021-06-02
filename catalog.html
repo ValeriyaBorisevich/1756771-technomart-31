@@ -109,23 +109,23 @@
           <fieldset class="filter-brand">
             <label>Производители:</label>
             <ul>
-              <li>
+              <li class="filter-brand-item">
                 <input type="checkbox" name="brand" id="brand-bosch" checked>
                 <label for="brand-bosch">BOSCH</label>
               </li>
-              <li>
+              <li class="filter-brand-item">
                 <input type="checkbox" name="brand" id="brand-interscol">
                 <label for="brand-interscol">Интерскол</label>
-              </li>
-              <li>
+              </li> 
+              <li class="filter-brand-item">
                 <input type="checkbox" name="brand" id="brand-makita" checked>
                 <label for="brand-makita">Makita</label>
               </li>
-              <li>
+              <li class="filter-brand-item">
                 <input type="checkbox" name="brand" id="brand-dewalt">
                 <label for="brand-dewalt">Dewalt</label>
               </li>
-              <li>
+              <li class="filter-brand-item">
                 <input type="checkbox" name="brand" id="brand-hitachi">
                 <label for="brand-hitachi">Hitachi</label>
               </li>
@@ -134,11 +134,11 @@
           <fieldset class="filter-chargertype">
             <label>Питание:</label>
             <ul>
-              <li>
+              <li class="filter-chargertype-item">
                 <input type="radio" name="chargertype" value="chargertype-accumulator" id="filter-accumulator" checked>
                 <label for="filter-accumulator">Аккумуляторные</label>
               </li>
-              <li>
+              <li class="filter-chargertype-item">
                 <input type="radio" name="chargertype" value="chargertype-wire" id="filter-wire">
                 <label for="filter-wire">Сетевые</label>
               </li>
@@ -162,12 +162,12 @@
         </ul>
         <ul class="sorting-order">
           <li>
-            <button type="button">
+            <button type="button button-sorting-up">
               <img src="https://via.placeholder.com/11x10" alt="Сортировка от меньшего к большему">
             </button>
           </li>
           <li>
-            <button type="button">
+            <button type="button button-sorting-down">
               <img src="https://via.placeholder.com/11x10" alt="Сортировка от большего к меньшему">
             </button>
           </li>
@@ -442,7 +442,7 @@
       </div>
     </footer>
 
-    <section>
+    <section class="modal">
       <h2>Товар добавлен в корзину!</h2>
       <ul>
         <li>
@@ -452,7 +452,7 @@
           <a href="#">Продолжить покупки</a>
         </li>
       </ul>
-      <button type="button">Закрыть</button>
+      <button type="modal-close">Закрыть</button>
     </section>
 
   </body>
