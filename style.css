@@ -1,11 +1,8 @@
 :root {
   --basic-red: #EE3643;
+  --dark-red: #CA2C37;
   --basic-green: #63A63E;
   --basic-grey: #3D546F;
-  --basic-greylight: #C5C5C5;
-  --basic-background: #F1F5F7;
-  --background-additional: #F9F5F0;
-  --white: #FFFFFF;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
@@ -17,17 +14,29 @@
   --black: #000000;
   --background-special: #32425C;
   --background-special-dark: #293449;
+  --background-special-darkest: #1D2739;
   --border-grey: #EAEAEA; 
   --price-grey: #A9A9A9;
-  /* --white-transparent: , mix-blend-mode: normal, opacity: 0.3; - Попробовала записать так, но не особо вышло) Интересно вобще можно нечто такое делать? 
-  А ведь еще градиент есть */
+  --basic-greylight: #C5C5C5;
+  --basic-background: #F1F5F7;
+  --background-additional: #F9F5F0;
+  --white: #FFFFFF;
+  --active-link-bg: #161D29;
+  --success-active: #63A63E;
+  --background-socials: #212A3A;
+  --white-transparent-03: rgba(255, 255, 255, 0.3);
+  --white-transparent-05: rgba(255, 255, 255, 0.5);
+  --grey-transparent-03: rgba(197, 197, 197, 0.3);
+  --dark-grey-transparent-03: rgba(169, 169, 169, 0.3);
+  --pt-sans: "PT Sans", Arial, sans-serif;
+  --cuprum: "Cuprum", Arial, sans-serif;
 }
 
 body {
   min-width: 1200px;
   margin: 0;
   padding: 0;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: var(--pt-sans);
   font-size: 13px;
   line-height: 24px;
   font-weight: 400;
@@ -47,14 +56,23 @@ body {
   color: var(--white);
   background-color: var(--basic-red);
   width: 192px;
-  height: 38px;
-  display: block;
+  display: inline-block;
   text-transform: uppercase;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  /* Где-то на этом этапе засомневалась в расставлении классов и вообще тегов, где лучше линк, гле баттон? :( */
+  padding: 9px;
+  padding-top: 11px;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--dark-red);
+}
+
+.button:active {
+  background-color: var(--error);
 }
 
 .img {
@@ -73,7 +91,7 @@ body {
 /* header */
 
 .page-header {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
@@ -86,25 +104,49 @@ body {
   color: var(--white);
 }
 
+.search:focus {
+  color: var(--black);
+  background-color: var(--white);
+}
+
 .header-navigation {
   background-color: var(--background-special);
   color: var(--white);
 }
 
+.header-navigation .link:hover {
+  background-color: var(--background-special-dark);
+}
+
+.header-navigation .link:active {
+  background-color: var(--background-special-darkest);
+  color: var(--white-transparent-05);
+}
+
+.link-cart, .link-order, .link-bookmark  {
+  text-align: center;
+  display: inline-block;
+  width: 150px;
+  padding: 9px;
+}
+
+.link-bookmark:active {
+  color: var(--white-transparent-05);
+  background-color: var(--active-link-bg);
+}
+
 .link-order {
   background-color: var(--success);
-  display: block;
-  width: 150px;
-  height: 40px;
-  text-align: center;
-  /* здесь я хотела добавить vertical-align, а он-то только для инлайновых эелементов... в итоге, сомневаюсь вообще в этом способе, 
-    мб надо как оборачивать ссылку или еще что-то? */
+}
+
+.link-order:active {
+  background-color: var(--success-active);
+  color: var(--white-transparent-05);
 }
 
 .header-company-info .info-text {
   color: var(--basic-red);
-  font-family: "Cuprum", Arial, sans-serif;
-  /* Нужно ли добавлять вот так Arial каждый раз? Или достаточно только в body? */
+  font-family: var(--cuprum);
   font-style: italic;
 }
 
@@ -118,20 +160,33 @@ body {
 }
 
 .header-address {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: var(--background-special);
 }
 
-.user-menu .link {
-  font-family: "Cuprum", Arial, sans-serif;
+.link-login, .link-signin {
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 21px;
   line-height: 21px;
   color: var(--black);
   background-color: var(--white);
+  text-align: center;
+  display: inline-block;
+  width: 150px;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.link-login:hover, .link-signin:hover {
+  color: var(--basic-red);
+}
+
+.link-login:active, .link-signin:active {
+  color: var(--basic-greylight);
 }
 
 /* offers */
@@ -142,28 +197,28 @@ body {
 }
 
 .title-offers {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
   color: var(--white);
 }
 
-/* Здесь я пытаюсь задать полупрозрачный фон кнопкам, хотела подвинуть кнопки поверх этого фона, но не знаю как, и так ли нужно делать вообще Ж( */
-
-.button-offers-background {
-  background-color: var(--white);
-  mix-blend-mode: normal;
-  opacity: 0.3;
-  width: 135px;
-  height: 38px;
-}
-
 .button-offers {
   color: var(--white);
-  background-color: transparent;
+  background-color: var(--white-transparent-03);
   text-align: center;
   text-transform: uppercase;
+  width: 135px;
+  padding: 10px;
+}
+
+.button-offers:hover {
+  background-color: var(--grey-transparent-03);
+}
+
+.button-offers:active {
+  background-color: var(--dark-grey-transparent-03);
 }
 
 .offers-box-materials {
@@ -187,7 +242,7 @@ body {
 }
 
 .slide-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
@@ -195,7 +250,7 @@ body {
 }
 
 .slide-text {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -210,7 +265,7 @@ body {
 }
 
 .title-goods, .title-brands {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
@@ -225,7 +280,7 @@ body {
 }
 
 .link-goods {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: var(--pt-sans);
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
@@ -233,7 +288,7 @@ body {
 }
 
 .price-previous {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: var(--pt-sans);
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -242,7 +297,7 @@ body {
 }
 
 .price-current {
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: var(--pt-sans);
   font-weight: 700;
   font-size: 17px;
   line-height: 18px;
@@ -264,7 +319,7 @@ body {
 }
 
 .title-section {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
@@ -273,7 +328,7 @@ body {
 }
 
 .tab-title {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 30px;
   line-height: 30px;
@@ -281,39 +336,61 @@ body {
   color: var(--background-special);
 }
 
-/* Здесь я поняла, что у кнопок два состояния же, нажато и нет, и пока не понимаю, как это реализовать. Наверное, нужно передлать разметку еще понадобится? */
 .tablinks-button {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
   text-transform: uppercase;
+  color: var(--white);
+  background-color: var(--background-special);
+  border: none;
+  width: 240px;
+  padding-top: 13.5px;
+  padding-bottom: 17.5px;
+  padding-left: 22px;
+  text-align: left;
+}
+
+.tablinks-button:hover {
+  color: var(--white);
+  background-color: var(--background-special-dark);
+}
+
+.tablinks-button:active {
   color: var(--background-special);
   background-color: var(--white);
+}
+
+.button-credit {
+  border: none;
 }
 
 /* shop-info */
 
 .delivery-companies {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: var(--black);
-  list-style-image: url("img/dash.png"); /* почти, но не то %) */    
+  color: var(--black);  
+}
+
+.delivery-company::marker {
+  content: url("img/dash.png");
 }
 
 /* footer */
 
 .page-footer {
-  font-family: "Cuprum", Arial, sans-serif;
+  font-family: var(--cuprum);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 }
 
 .footer-wrapper {
-  background-color: var(--background-special);
+  background-color: var(--background-special);  
 }
 
 .footer-wrapper-lower {
@@ -328,14 +405,61 @@ body {
   color: var(--special-yellowlight);
 }
 
+.link-footer-navigation:hover, .link-additional:hover {
+  text-decoration: underline;
+}
+
+.link-footer-navigation:active, .link-additional:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+
 .copyright, .title-feedback, .text-developed {
   font-size: 16px;
   line-height: 18px;
   color: var(--white);
 }
 
+.list-socials {
+  width: 44px;
+  height: 44px;
+  background-color: var(--background-socials);
+  border-radius: 50%;
+}
+
+.list-socials:hover, .list-socials:active {
+  background-color: var(--basic-red);
+}
+
+.icon-vk {
+  padding: 9px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+}
+
+.icon-fb {
+  padding: 16px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+}
+
+.icon-insta {
+  padding: 11px;
+  padding-right: 12px;
+  padding-bottom: 12px;
+}
+
 .link-mail, .link-developed {
   font-size: 16px;
   line-height: 18px; 
   color: var(--special-yellowlight);  
+}
+
+.link-mail:hover, .link-developed:hover {
+  text-decoration: underline; 
+}
+
+.link-mail:active, .link-developed:active {
+  text-decoration: none; 
+  color: var(--basic-red);
 }
