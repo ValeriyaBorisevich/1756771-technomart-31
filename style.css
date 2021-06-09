@@ -2,32 +2,35 @@
   --basic-red: #EE3643;
   --dark-red: #CA2C37;
   --basic-green: #63A63E;
-  --basic-grey: #3D546F;
+  --dark-green: #518534;
+  --success: #5FBB2D;
+  --special-greenlight: #8ED78F;
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
-  --special-greenlight: #8ED78F;
   --special-yellowlight: #FFD180;
-  --success: #5FBB2D;
   --warning: #FFBF47;
   --error: #BA2732;
   --black: #000000;
   --background-special: #32425C;
   --background-special-dark: #293449;
   --background-special-darkest: #1D2739;
+  --basic-grey: #3D546F;
   --border-grey: #EAEAEA; 
   --price-grey: #A9A9A9;
   --basic-greylight: #C5C5C5;
   --basic-background: #F1F5F7;
   --background-additional: #F9F5F0;
+  --background-catalog: #F7F3EC;
   --white: #FFFFFF;
+  --border-grey-light: #E5E5E5;
   --active-link-bg: #161D29;
-  --success-active: #63A63E;
   --background-socials: #212A3A;
   --white-transparent-03: rgba(255, 255, 255, 0.3);
   --white-transparent-05: rgba(255, 255, 255, 0.5);
   --grey-transparent-03: rgba(197, 197, 197, 0.3);
   --dark-grey-transparent-03: rgba(169, 169, 169, 0.3);
+  --black-transparent-03: rgba(0, 0, 0, 0.3);
   --pt-sans: "PT Sans", Arial, sans-serif;
   --cuprum: "Cuprum", Arial, sans-serif;
 }
@@ -65,6 +68,7 @@ body {
   padding: 9px;
   padding-top: 11px;
   text-align: center;
+  border: none;
 }
 
 .button:hover {
@@ -88,7 +92,7 @@ body {
   list-style: none;
 }
 
-/* header */
+/* Header */
 
 .page-header {
   font-family: var(--cuprum);
@@ -130,18 +134,26 @@ body {
   padding: 9px;
 }
 
-.link-bookmark:active {
+.link-bookmark:active, .link-cart:active {
   color: var(--white-transparent-05);
   background-color: var(--active-link-bg);
 }
 
+.cart-full {
+  background-color: var(--basic-red);
+}
+
 .link-order {
+  background-color: var(--basic-green);
+}
+
+.link-order:hover {
   background-color: var(--success);
 }
 
 .link-order:active {
-  background-color: var(--success-active);
-  color: var(--white-transparent-05);
+  background-color: var(--basic-green);
+  color: transparent;
 }
 
 .header-company-info .info-text {
@@ -189,7 +201,34 @@ body {
   color: var(--basic-greylight);
 }
 
-/* offers */
+.user-menu-submenu {
+  background-color: var(--white);
+}
+
+.link-user {
+  color: var(--black);
+  display: inline-block;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.link-user:active {
+  color: var(--basic-greylight);
+}
+
+.link-user-orders, .link-user-cabinet {
+  color: var(--background-special);
+}
+
+.link-user-orders:hover, .link-user-cabinet:hover {
+  color: var(--basic-red);
+}
+
+.link-user-orders:active, .link-user-cabinet:active {
+  color: var(--basic-greylight);
+}
+
+/* Main page -> Offers */
 
 .offers-box {
   width: 300px;
@@ -258,7 +297,7 @@ body {
 }
 
 
-/* popular goods and brands */
+/* Main page -> Popular goods and brands */
 
 .popular-wrapper {
   background-color: var(--background-additional);
@@ -312,7 +351,7 @@ body {
   border: 1px solid var(--border-grey);
 }
 
-/* services */
+/* Main page -> Services */
 
 .services {
   background-color: var(--basic-background);
@@ -344,7 +383,6 @@ body {
   text-transform: uppercase;
   color: var(--white);
   background-color: var(--background-special);
-  border: none;
   width: 240px;
   padding-top: 13.5px;
   padding-bottom: 17.5px;
@@ -366,7 +404,7 @@ body {
   border: none
 }
 
-/* shop-info */
+/* Main page -> Shop-info */
 
 .delivery-companies {
   font-family: var(--cuprum);
@@ -380,7 +418,213 @@ body {
   content: url("img/dash.png");
 }
 
-/* footer */
+
+/* Breadcrambs */
+
+.breadcrambs .link {
+  color: var(--black);
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* Catalog */
+
+.catalog-title-wrapper {
+  background-color: var(--basic-background);
+}
+
+.catalog-title {
+  font-size: var(--cuprum);
+  color: var(--background-special); 
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Catalog -> Filter and Sorting */
+
+.filter-title, .sorting-title {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.filter-title, 
+.sorting,
+.price-range-wrapper,
+.minprice,
+.maxprice {
+  background-color: var(--background-catalog);
+}
+
+
+.filter-pricerange,
+.filter-brand,
+.filter-minprice,
+.filter-maxprice,
+.filter-chargertype,
+.minprice, 
+.maxprice {
+  border: none;
+}
+
+.minprice::placeholder, .maxprice::placeholder {
+  color: var(--black);
+  font-size: 17px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter-subtitle {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 30px;  
+}
+
+.filter-brand, .filter-price {
+  border-bottom: 1px solid var(--border-grey);
+  width: 220px;
+}
+
+.filter-brand-item, .filter-chargertype-item {
+  font-size: 15px;
+  line-height: 19px;  
+  text-transform: uppercase;
+}
+
+.button-show {
+  border: 1px solid var(--border-grey);
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 18px;
+  background-color: var(--white);
+  width: 220px;
+  padding: 10px;
+} 
+
+.sorting-category {
+  color: var(--black-transparent-03);
+  font-size: 13px;
+  line-height: 18px;
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+}
+
+.sorting-category:hover {
+  color: var(--black);
+  text-decoration: underline var(--basic-red);
+} 
+
+.sorting-category:active {
+  color: var(--basic-red);
+  text-decoration: none;
+}
+
+.button-sorting-up, .button-sorting-down {
+  background-color: transparent;
+  border: none;
+}
+
+.button-sorting-up {
+  transform: rotate(180deg);
+}
+
+/* Class for inactive radio buttons and checkboxes */
+
+.inactive  {
+  opacity: 0.4;
+}
+
+/* Catalog -> Goods */
+
+.button-to-buy {
+  background-color: var(--basic-green);
+  font-family: var(--cuprum);
+  font-size: 14px;
+  line-height: 18px;
+  display: inline-block;
+  width: 135px;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.button-to-buy:hover {
+  background-color: var(--success);
+}
+
+.button-to-buy:active {
+  background-color: var(--dark-green);
+}
+
+.button-to-bookmarks {
+  background-color: var(--white);
+  font-family: var(--cuprum);
+  color: var(--background-special);
+  font-size: 14px;
+  line-height: 18px;
+  display: inline-block;
+  width: 135px;
+  padding: 10px;
+  border: 2px solid var(--basic-green);
+  border-radius: 2px;
+}
+
+.button-to-bookmarks:hover {
+  border-color: var(--background-special);
+  background-color: var(--white);
+}
+
+.button-to-bookmarks:active {
+  background-color: var(--white);
+  border-color: var(--background-special);
+  opacity: 0.5;
+}
+
+/* Pagination */
+
+.button-pagination {
+  border: 1px solid var(--border-grey-light);
+  border-radius: 2px;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button-pagination:hover {
+  border-color: var(--basic-greylight);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button-pagination:active {
+  border-color: var(--basic-red);
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button-pagination-current,
+.button-pagination-current:hover, 
+.button-pagination-current:active {
+  border-color: var(--basic-red);
+  background-color: var(--basic-red);
+  color: var(--white);
+}
+
+/* Catalog -> Perforators' info */
+
+.perforator-info {
+  background-color: var(--basic-background);
+}
+
+/* Footer */
 
 .page-footer {
   font-family: var(--cuprum);
