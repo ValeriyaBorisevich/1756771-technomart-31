@@ -90,13 +90,13 @@
           </a>
         </li>
         <li>
-          <a class="link" href="404.html">Каталог</a>
+          <a class="link breadcrambs-link" href="404.html">Каталог</a>
         </li>
         <li>
-          <a class="link" href="404.html">Инструмент</a>
+          <a class="link breadcrambs-link" href="404.html">Инструмент</a>
         </li>
         <li>
-          <a class="link">Перфораторы</a>
+          <a class="link breadcrambs-link-current">Перфораторы</a>
         </li>
       </ul>
       <div class="catalog-title-wrapper">
@@ -115,12 +115,10 @@
               </div>
             </fieldset>
             <fieldset class="filter-minprice">
-              <textarea class="minprice" placeholder="0"></textarea>
-              <input type="text" name="minprice">
+              <input class="minprice" id="user-text-mail" type="text" name="text" placeholder="0"> 
             </fieldset>
             <fieldset class="filter-maxprice">
-              <textarea class="maxprice" placeholder="30000"></textarea>
-              <input type="text" name="maxprice">
+              <input class="maxprice" id="user-text-mail" type="text" name="text" placeholder="30000"> 
             </fieldset>
           </div>
           <fieldset class="filter-brand">
@@ -168,31 +166,31 @@
         <h2 class="sorting-title">Сортировка:</h2>
         <ul class="list sorting-categories">
           <li>
-            <button class="sorting-category" type="button">По цене</button>
+            <a href="#" class="link sorting-category sorting-category-selected">По цене</a>
           </li>
           <li>
-            <button class="sorting-category" type="button">По типу</button>
+            <a href="#" class="link sorting-category">По типу</a>
           </li>
           <li>
-            <button class="sorting-category" type="button">По функционалу</button>
+            <a href="#" class="link sorting-category">По функционалу</a>
           </li>
         </ul>
         <ul class="list sorting-order">
           <li>
-            <button class="button-sorting-up" type="button">
+            <a href="#" class="link link-sorting-up">
               <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
               </svg>
               <p class="visually-hidden">Сортировка от меньшего к большему</p>
-            </button>
+            </a>
           </li>
           <li>
-            <button class="button-sorting-down" type="button">
+            <a href="#" class="link link-sorting-down">
               <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5.66241 10L0.162415 0H11.1624" fill="#C5C5C5"/>
               </svg>
               <p class="visually-hidden">Сортировка от большего к меньшему</p>
-            </button>
+            </a>
           </li>
         </ul>
       </section>
@@ -473,16 +471,18 @@
       </div>
     </footer>
 
-    <section class="modal">
-      <h2>Товар добавлен в корзину!</h2>
-      <ul>
-        <li>
-          <a href="#">Оформить заказ</a>
-        </li>
-        <li>
-          <a href="#">Продолжить покупки</a>
-        </li>
-      </ul>
+    <section class="modal modal-cart">
+      <h2 title="modal-title">Товар добавлен в корзину!</h2>
+      <div class="modal-button-wrapper">
+        <ul class="list">
+          <li>
+            <a class="button" href="#">Оформить заказ</a>
+          </li>
+          <li>
+            <a class="button button-continue-shopping" href="#">Продолжить покупки</a>
+          </li>
+        </ul>
+      </div>
       <button type="button">Закрыть</button>
     </section>
 

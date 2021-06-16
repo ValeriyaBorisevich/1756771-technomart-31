@@ -17,41 +17,45 @@
   </head>
   <body class="page-body">
     <header class="page-header">
-      <div class="menu">
-        <a class="page-header-logo" href="#">
-          <img class="img" src="img/logo/logo-technomart-header.svg" width="220" height="47" alt="Логотип Техномарт">
-        </a>
-        <form class="search" action="https://echo.htmlacademy.ru" method="get">
-          <label for="search">Поиск:</label>
-          <input id="search" name="s" placeholder="" type="search">
-          <button type="submit"></button>
-        </form>
-        <ul class="list">
-          <li><a class="link link-bookmark" href="404.html">Закладки: <span>0</span></a></li>
-          <li><a class="link link-cart" href="404.html">Корзина: <span>0</span></a></li>
-          <li><a class="link link-order" href="404.html">Оформить заказ</a></li>
-        </ul>
+      <div class="header-menu-wrapper">
+        <div class="menu">
+          <a class="page-header-logo" href="#">
+            <img class="img" src="img/logo/logo-technomart-header.svg" width="220" height="47" alt="Логотип Техномарт">
+          </a>
+          <form class="search" action="https://echo.htmlacademy.ru" method="get">
+            <label for="search">Поиск:</label>
+            <input id="search" name="s" placeholder="" type="search">
+            <button type="submit"></button>
+          </form>
+          <ul class="list">
+            <li><a class="link link-bookmark" href="404.html">Закладки: <span>0</span></a></li>
+            <li><a class="link link-cart" href="404.html">Корзина: <span>0</span></a></li>
+            <li><a class="link link-order" href="404.html">Оформить заказ</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="header-company-info">
-        <h2 class="visually-hidden">Описание магазина</h2>
-        <p class="info-text">Интернет-магазин<br>
-        строительных материалов<br>
-        и инструментов для ремонта</p>
-      </div>
-      <div>
-        <h2 class="visually-hidden">Контакты и адрес</h2>
-        <a class="link link-phone-header" href="tel:+78005558628">+7 800 555-86-28</a>
-        <p class="header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
-      </div>
-      <div class="user-menu">
-        <h2 class="visually-hidden">Авторизация</h2>
-        <ul class="list">
-          <li><a class="link link-login" href="404.html">Вход</a></li>
-          <li><a class="link link-signin" href="404.html">Регистрация</a></li>
-        </ul>
+      <div class="header-info-wrapper">
+        <div class="header-company-info">
+          <h2 class="visually-hidden">Описание магазина</h2>
+          <p class="info-text">Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта</p>
+        </div>
+        <div>
+          <h2 class="visually-hidden">Контакты и адрес</h2>
+          <a class="link link-phone-header" href="tel:+78005558628">+7 800 555-86-28</a>
+          <p class="header-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+        </div>
+        <div class="user-menu">
+          <h2 class="visually-hidden">Авторизация</h2>
+          <ul class="list">
+            <li><a class="link link-login" href="404.html">Вход</a></li>
+            <li><a class="link link-signin" href="404.html">Регистрация</a></li>
+          </ul>
+        </div>
       </div>
       <nav class="header-navigation">
-        <ul class="list">
+        <ul class="list header-naviagtion-list">
           <li><a  class="link" href="index.html">Главная</a></li>
           <li><a  class="link" href="404.html">Компания</a></li>
           <li><a  class="link" href="catalog.html">Каталог</a></li>
@@ -64,52 +68,52 @@
     </header>
     <main class="main">
       <h1 class="visually-hidden">Интернет-магазин Техномарт</h1>
-      <section class="offers"> <!--Сначала написала класс промо, но потом встретила инфу, что такие класс режется адблоком, поменяла на офферс-->
+      <section class="offers"> 
         <h2 class="visually-hidden">Промо-блок</h2>
-        <div class="offers-box offers-box-materials">
-          <h3 class="title-offers">Материалы</h3>
-          <a class="button button-offers" href="404.html">На любой вкус</a> <!-- Здесь и далее класс button присвоен эелементам, 
-          со схожей стилизацией под кнопку. С остальными ссылками сделала link, добавляя по надобности более специфичный класс -->
+        <div class="offers-wrapper">
+          <div class="offers-box offers-box-materials">
+            <h3 class="title-offers">Материалы</h3>
+            <a class="button button-offers" href="404.html">На любой вкус</a>
           </div>
-        </div>
-        <div class="offers-box offers-box-tools">
-          <h3 class="title-offers">Инструмент</h3>
-          <a class="button button-offers" href="404.html">На все случаи</a>
-        </div>
-        <div class="offers-box offers-box-tech">
-          <h3 class="title-offers">Техника</h3>
-          <a class="button button-offers" href="404.html">Для стройки</a>
-        </div>
-        <div class="offers-box offers-box-sale">
-          <h3 class="title-offers">Скидки 50%</h3>
-          <a class="button button-offers" href="404.html">На 350 товаров</a>
-        </div>
-        <div class="offers-box offers-box-delivery">
-          <h3 class="title-offers">Доставка</h3>
-           <a class="button button-offers" href="404.html">Бесплатно</a>
+          <div class="offers-box offers-box-tools">
+            <h3 class="title-offers">Инструмент</h3>
+            <a class="button button-offers" href="404.html">На все случаи</a>
           </div>
-        </div>
-        <div class="slider">
-          <div class="slider-control">
-            <button type="button button-slider-back"></button>
-            <button type="button button-slider-next"></button>
+          <div class="offers-box offers-box-tech">
+            <h3 class="title-offers">Техника</h3>
+            <a class="button button-offers" href="404.html">Для стройки</a>
           </div>
-          <div class="slider-pagination-buttons">
-            <button type="button"></button>
-            <button type="button"></button>
+          <div class="offers-box offers-box-sale">
+            <h3 class="title-offers">Скидки 50%</h3>
+            <a class="button button-offers" href="404.html">На 350 товаров</a>
           </div>
-          <div class="slider-slides">
-            <div class="slide">
-              <h3 class="slide-title">Перфораторы</h3>
-              <p class="slide-text">Настоящие мужские игрушки</p>
-              <img class="img" src="content/slider/man-perforator.jpg" width="620" height="266" alt="Мужчина с перфоратором">
-              <a class="button" href="catalog.html">Открыть каталог</a>
+          <div class="offers-box offers-box-delivery">
+            <h3 class="title-offers">Доставка</h3>
+            <a class="button button-offers" href="404.html">Бесплатно</a>
             </div>
-            <div class="slide">
-              <h3 class="slide-title">Дрели</h3>
-              <p class="slide-text">Соседям на радость!</p>
-              <img class="img" src="content/slider/man-drill.jpg" width="620" height="266" alt="Мужчина с дрелью">
-              <a  class="button" href="404.html">Открыть каталог</a>
+          </div>
+          <div class="slider">
+            <div class="slider-control">
+              <button type="button button-slider-back"></button>
+              <button type="button button-slider-next"></button>
+            </div>
+            <div class="slider-pagination-buttons">
+              <button type="button"></button>
+              <button type="button"></button>
+            </div>
+            <div class="slider-slides">
+              <div class="slide">
+                <h3 class="slide-title">Перфораторы</h3>
+                <p class="slide-text">Настоящие мужские игрушки</p>
+                <img class="img" src="content/slider/man-perforator.jpg" width="620" height="266" alt="Мужчина с перфоратором">
+                <a class="button" href="catalog.html">Открыть каталог</a>
+              </div>
+              <div class="slide visually-hidden">
+                <h3 class="slide-title">Дрели</h3>
+                <p class="slide-text">Соседям на радость!</p>
+                <img class="img" src="content/slider/man-drill.jpg" width="620" height="266" alt="Мужчина с дрелью">
+                <a  class="button" href="404.html">Открыть каталог</a>
+              </div>
             </div>
           </div>
         </div>
@@ -119,7 +123,7 @@
           <h2 class="title-section title-goods">Популярные товары:</h2>
           <a class="button" href="404.html">Все популярные товары</a>
         </div>
-        <ul class="list">
+        <ul class="list list-goods">
           <li class="list-goods-item">
             <div>
               <a class="link link-goods" href="">
@@ -195,72 +199,78 @@
         </ul>
       </section>
       <section class="services">
-        <h2 class="title-section">Сервисы</h2> 
-        <p class="text">Хороший интернет-магазин отличается от плохого не только ценами!</p>
-        <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-        <div class="tab">
-          <div class="tablinks">
-              <button class="tablinks-button" type="button">Доставка</button>
-              <button class="tablinks-button" type="button">Гарантия</button>
-              <button class="tablinks-button" type="button">Кредит</button>
+        <div class="services-wrapper">
+          <div class="services-info">
+            <h2 class="title-section">Сервисы</h2> 
+            <p class="text">Хороший интернет-магазин отличается от плохого не только ценами!</p>
+            <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           </div>
-          <div class="tabcontent">
-            <div> 
-              <h3 class="tab-title">Доставка</h3>
-              <p class="text">
-                Мы с удовольствием доставим ваш товар прямо<br> 
-                к вашему подъезду совершенно бесплатно!<br>
-                мы неплохо заработаем,<br>
-                его на ваш этаж!
-              </p>
-            <div>
-              <h3 class="tab-title">Гарантия</h3>
-              <p class="text">
-                Если купленный у нас товар поломается или заискрит,<br> 
-                а также в случае пожара, спровоцированного его<br>
-                возгоранием,  вы всегда можете быть уверены в нашей<br>
-                гарантии. Мы обменяем сгоревший товар на новый.<br>
-                Дом уж восстановите как-нибудь сами.
-              </p>
+          <div class="tab">
+            <div class="tablinks">
+                <button class="tablinks-button" type="button">Доставка</button>
+                <button class="tablinks-button" type="button">Гарантия</button>
+                <button class="tablinks-button" type="button">Кредит</button>
             </div>
-            <div>
-              <h3 class="tab-title">Кредит</h3>
-              <p class="text-content">Залезть в долговую яму стало проще!</p>
-              <p class="text-content">Кредитные консультанты придут вам на помощь.</p>
-              <button class="button button-credit" type="submit">Отправить заявку</button>
+            <div class="tabcontent">
+              <div> 
+                <h3 class="tab-title">Доставка</h3>
+                <p class="text">
+                  Мы с удовольствием доставим ваш товар прямо<br> 
+                  к вашему подъезду совершенно бесплатно!<br>
+                  мы неплохо заработаем,<br>
+                  его на ваш этаж!
+                </p>
+              <div class="visually-hidden">
+                <h3 class="tab-title">Гарантия</h3>
+                <p class="text">
+                  Если купленный у нас товар поломается или заискрит,<br> 
+                  а также в случае пожара, спровоцированного его<br>
+                  возгоранием,  вы всегда можете быть уверены в нашей<br>
+                  гарантии. Мы обменяем сгоревший товар на новый.<br>
+                  Дом уж восстановите как-нибудь сами.
+                </p>
+              </div>
+              <div class="visually-hidden">
+                <h3 class="tab-title">Кредит</h3>
+                <p class="text-content">Залезть в долговую яму стало проще!</p>
+                <p class="text-content">Кредитные консультанты придут вам на помощь.</p>
+                <button class="button button-credit" type="submit">Отправить заявку</button>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section class="shop-info">
-        <h2 class="title-section">Компания "Техномарт"</h2>
-        <p class="text">
-          Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
-          ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
-          гастарбайтерах.
-        </p>
-        <p class="text">
-          Мы можем доставить ваш товар в самые отдаленные точки России!
-        </p>
-        <p class="text">
-          Техномарт работает со многими транспортными компаниями:
-        </p>
-        <ul class="delivery-companies">
-          <li class="delivery-company">Деловыми линиями</li>
-          <li class="delivery-company">Автотрейдинг</li>
-          <li class="delivery-company">ЖелДорЭкспедиция</li>
-        </ul>
-        <a class="button" href="404.html">Подробне о компании</a>
-      </section>
-      <section class="contacts">
-        <h2 class="title-section">Контакты</h2>
-        <p class="text">
-          Вы можете забрать товар сами,<br>
-          заехав в наш офис:
-        </p>
-        <a><img class="img" src="content/map.png" width="300" height="158" alt="Схема проезда"></a>
-        <a class="button" href="mailto:mail@htmlacademy.ru">Заблудились? Напишите нам!</a>
-      </section>
+      <div class="main-company-info">
+        <section class="shop-info">
+          <h2 class="title-section">Компания "Техномарт"</h2>
+          <p class="text">
+            Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
+            ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
+            гастарбайтерах.
+          </p>
+          <p class="text">
+            Мы можем доставить ваш товар в самые отдаленные точки России!
+          </p>
+          <p class="text">
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="delivery-companies">
+            <li class="delivery-company">Деловыми линиями</li>
+            <li class="delivery-company">Автотрейдинг</li>
+            <li class="delivery-company">ЖелДорЭкспедиция</li>
+          </ul>
+          <a class="button" href="404.html">Подробне о компании</a>
+        </section>
+        <section class="contacts">
+          <h2 class="title-section">Контакты</h2>
+          <p class="text">
+            Вы можете забрать товар сами,<br>
+            заехав в наш офис:
+          </p>
+          <a><img class="img" src="content/map.png" width="300" height="158" alt="Схема проезда"></a>
+          <a class="button" href="mailto:mail@htmlacademy.ru">Заблудились? Напишите нам!</a>
+        </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="footer-wrapper">
@@ -293,54 +303,87 @@
         </div>
       </div>
       <div class="footer-wrapper-lower">
-        <div class="copyright">
-          <h2 class="visually-hidden">Копирайт</h2>
-          <p>
-            &copy; 2010–2021 Компания «Техномарт»<br>
-            Все права защищены
-          </p>
-        </div>
-        <div>
-          <h2 class="visually-hidden">Социальные сети</h2>
-          <ul class="list">
-            <li class="list-socials">
-              <a class="link" href="#">
-                <svg class="icon-socials icon-vk" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15.5403 11.7281C16.4609 11.4384 17.6395 13.6406 18.8943 14.4834C19.836 15.1219 20.5573 14.9841 20.5573 14.9841L23.9017 14.9372C23.9017 14.9372 25.6495 14.8322 24.8232 13.4803C24.7549 13.3678 24.3389 12.4781 22.334 10.6472C20.2376 8.73186 20.5217 9.04218 23.0456 5.73093C24.5835 3.71249 25.1988 2.47968 25.0062 1.95468C24.8213 1.44936 23.6918 1.58061 23.6918 1.58061L19.9237 1.60593C19.5568 1.60686 19.2458 1.71749 19.1042 2.08874C19.1013 2.09249 18.5062 3.65061 17.7127 4.9753C16.0362 7.77749 15.3669 7.92655 15.0896 7.75124C14.4531 7.3453 14.6139 6.1228 14.6139 5.25374C14.6139 2.5378 15.0299 1.4053 13.7992 1.1128C13.388 1.0153 13.0876 0.951552 12.0389 0.942177C10.6985 0.922489 9.56027 0.942177 8.91508 1.25061C8.48656 1.45968 8.15819 1.91811 8.35753 1.94436C8.6079 1.97718 9.1693 2.09436 9.46975 2.49374C9.8559 3.01124 9.84434 4.17093 9.84434 4.17093C9.84434 4.17093 10.0649 7.36874 9.32434 7.7653C8.8159 8.03718 8.12064 7.48218 6.62516 4.9378C5.86153 3.63655 5.28471 2.19843 5.28471 2.19843C5.28471 2.19843 5.17301 1.93124 4.97079 1.78499C4.73005 1.61155 4.39301 1.55624 4.39301 1.55624L0.816563 1.57874C0.816563 1.57874 0.27923 1.59374 0.0818227 1.82436C-0.0934366 2.02874 0.0673782 2.45061 0.0673782 2.45061C0.0673782 2.45061 2.86864 8.90155 6.04064 12.1509C8.94879 15.1341 12.2537 14.9362 12.2537 14.9362H13.7511C13.7511 14.9362 14.2027 14.8856 14.4338 14.6437C14.6495 14.4187 14.6399 13.9959 14.6399 13.9959C14.6399 13.9959 14.61 12.0187 15.5403 11.7281Z" fill="white"/>
-                </svg>
-                <p class="visually-hidden">Ссылка на Вконтакте</p> <!--Насколько поняла, подобные иконки, особенно, когда они в спрайте, можно делать доступными таким вот скрытым <p>
-                  Позже доавлю и другим иконкам такое, если это ок, особенно иконке разлогина и тп-->
-              </a>
-            </li>
-            <li class="list-socials">
-              <a class="link" href="#">
-                <svg class="icon-socials icon-fb" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
-                </svg>
-                <p class="visually-hidden">Ссылка на Facebook</p> <!-- Интересно, а для доступности можно писать тексты на разных языках? Или лучше на одном?-->
-              </a>
-            </li>
-            <li class="list-socials">
-              <a class="link" href="#">
-                <svg class="icon-socials icon-insta" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z" fill="white"/>
-                </svg>
-                <p class="visually-hidden">Ссылка на Instagram</p> <!-- A нужно ли писать "ссылка" каждый раз? Я вот подумала, что слабовидящему, наверное, будет проще понять, что это, 
-                  чем если просто написать ВК, Фейсбук и тд Или скринриедр ему сам объявит, что это ссылка? -->
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="feedback">
-          <h2 class="title-feedback">Обратная связь:</h2>
-          <a  class="link link-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </div>
-        <div class="developed">
-          <h2 class="visually-hidden">Авторский копирайт</h2>
-          <p class="text-developed">Разработано -</p>
-          <a class="link link-developed" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        <div class="footer-lower">
+          <div class="copyright">
+            <h2 class="visually-hidden">Копирайт</h2>
+            <p>
+              &copy; 2010–2021 Компания «Техномарт»<br>
+              Все права защищены
+            </p>
+          </div>
+          <div>
+            <h2 class="visually-hidden">Социальные сети</h2>
+            <ul class="list">
+              <li class="list-socials">
+                <a class="link" href="#">
+                  <svg class="icon-socials icon-vk" width="26" height="15" viewBox="0 0 26 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5403 11.7281C16.4609 11.4384 17.6395 13.6406 18.8943 14.4834C19.836 15.1219 20.5573 14.9841 20.5573 14.9841L23.9017 14.9372C23.9017 14.9372 25.6495 14.8322 24.8232 13.4803C24.7549 13.3678 24.3389 12.4781 22.334 10.6472C20.2376 8.73186 20.5217 9.04218 23.0456 5.73093C24.5835 3.71249 25.1988 2.47968 25.0062 1.95468C24.8213 1.44936 23.6918 1.58061 23.6918 1.58061L19.9237 1.60593C19.5568 1.60686 19.2458 1.71749 19.1042 2.08874C19.1013 2.09249 18.5062 3.65061 17.7127 4.9753C16.0362 7.77749 15.3669 7.92655 15.0896 7.75124C14.4531 7.3453 14.6139 6.1228 14.6139 5.25374C14.6139 2.5378 15.0299 1.4053 13.7992 1.1128C13.388 1.0153 13.0876 0.951552 12.0389 0.942177C10.6985 0.922489 9.56027 0.942177 8.91508 1.25061C8.48656 1.45968 8.15819 1.91811 8.35753 1.94436C8.6079 1.97718 9.1693 2.09436 9.46975 2.49374C9.8559 3.01124 9.84434 4.17093 9.84434 4.17093C9.84434 4.17093 10.0649 7.36874 9.32434 7.7653C8.8159 8.03718 8.12064 7.48218 6.62516 4.9378C5.86153 3.63655 5.28471 2.19843 5.28471 2.19843C5.28471 2.19843 5.17301 1.93124 4.97079 1.78499C4.73005 1.61155 4.39301 1.55624 4.39301 1.55624L0.816563 1.57874C0.816563 1.57874 0.27923 1.59374 0.0818227 1.82436C-0.0934366 2.02874 0.0673782 2.45061 0.0673782 2.45061C0.0673782 2.45061 2.86864 8.90155 6.04064 12.1509C8.94879 15.1341 12.2537 14.9362 12.2537 14.9362H13.7511C13.7511 14.9362 14.2027 14.8856 14.4338 14.6437C14.6495 14.4187 14.6399 13.9959 14.6399 13.9959C14.6399 13.9959 14.61 12.0187 15.5403 11.7281Z" fill="white"/>
+                  </svg>
+                  <p class="visually-hidden">Ссылка на Вконтакте</p> <!--Насколько поняла, подобные иконки, особенно, когда они в спрайте, можно делать доступными таким вот скрытым <p>
+                    Позже доавлю и другим иконкам такое, если это ок, особенно иконке разлогина и тп-->
+                </a>
+              </li>
+              <li class="list-socials">
+                <a class="link" href="#">
+                  <svg class="icon-socials icon-fb" width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 4V0H8C5.79086 0 4 1.79086 4 4V8H0V12H4V22H8V12H12V8H8V4H12Z" fill="white"/>
+                  </svg>
+                  <p class="visually-hidden">Ссылка на Facebook</p> <!-- Интересно, а для доступности можно писать тексты на разных языках? Или лучше на одном?-->
+                </a>
+              </li>
+              <li class="list-socials">
+                <a class="link" href="#">
+                  <svg class="icon-socials icon-insta" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0H18C19.65 0 21 1.35 21 3V18C21 19.65 19.65 21 18 21H3C1.35 21 0 19.65 0 18V3C0 1.35 1.35 0 3 0ZM14 10.5C14 8.57 12.43 7 10.5 7C8.57 7 7 8.57 7 10.5C7 12.43 8.57 14 10.5 14C12.43 14 14 12.43 14 10.5ZM3 18V9H4.181C4.0626 9.49127 4.00186 9.99467 4 10.5C4 14.0899 6.91015 17 10.5 17C14.0899 17 17 14.0899 17 10.5C16.9986 9.99464 16.9379 9.49118 16.819 9H18V18H3ZM14 7H18V3H14V7Z" fill="white"/>
+                  </svg>
+                  <p class="visually-hidden">Ссылка на Instagram</p> <!-- A нужно ли писать "ссылка" каждый раз? Я вот подумала, что слабовидящему, наверное, будет проще понять, что это, 
+                    чем если просто написать ВК, Фейсбук и тд Или скринриедр ему сам объявит, что это ссылка? -->
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-additional-info"> 
+            <div class="feedback">
+              <h2 class="title-feedback">Обратная связь:</h2>
+              <a  class="link link-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            </div>
+            <div class="developed">
+              <h2 class="visually-hidden">Авторский копирайт</h2>
+              <p class="text-developed">Разработано -</p>
+              <a class="link link-developed" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
+
+    <section class="modal modal-mail">
+      <form method="get" action="https://echo.htmlacademy.ru/">
+        <fieldset class="modal-mail-fieldset">
+          <label class="modal-mail-label" for="user-name-mail">Ваше Имя:</label>
+          <input class="modal-mail-input" id="user-name-mail" type="text" name="text" placeholder="Имя Фамилия"> 
+        </fieldset>
+        <fieldset class="modal-mail-fieldset">
+          <label class="modal-mail-label" for="user-e-mail-mail">Ваш e-mail:</label>
+          <input class="modal-mail-input" id="user-e-mail-mail" type="text" name="text" placeholder="email@example.com"> 
+        </fieldset>
+        <fieldset class="modal-mail-fieldset">
+          <label class="modal-mail-label" for="user-text-mail">Текст письма:</label>
+          <input class="modal-mail-input" id="user-text-mail" type="text" name="text" placeholder="В свободной форме"> 
+        </fieldset>
+        <div class="modal-button-wrapper">
+          <button class="button button-send" type="submit">Отправить</button>
+        </div>
+      </form>
+      <button type="button">Закрыть</button>
+    </section>
+
+    <section class="modal modal-map">
+      <a href="https://yandex.ru/maps/-/CCUaj8SILA">
+        <img src="/content/map-popup.png" width="943" height="449" alt="наб. Реки Карповки, 5 лит П, Санкт-Петербург">
+      </a> 
+      <button type="button">Закрыть</button>
+    </section>
+
   </body>
 </html>
