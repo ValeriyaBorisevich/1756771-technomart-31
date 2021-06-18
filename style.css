@@ -115,23 +115,11 @@ body {
   color: var(--black);
   background-color: var(--basic-background);
   padding-bottom: 60px;
-
-
-  display: grid;
-  /* здесь я сильно зависла и не понимаю, от  чего нужно отталкиваться. сделать grid-template-rows?
-  а потом внутри них микросетки для пунктов меню флексами? */
-  grid-template-rows: 42px 1fr 60px;
-  gap: 38px;
 }
 
 .header-menu-wrapper {
   background-color: var(--background-special-dark);
-}
-
-.header-info-wrapper {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
+  height: 42px;
 }
 
 .menu {
@@ -139,6 +127,14 @@ body {
   width: 940px;
   margin: 0 auto;
   padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* здесь у меня сложность с тем, что список ссылок он же в отельном теге, поэтому некрасиво вышло с флексами в вперхней части хедера */
+.list-header-menu {
+  display: flex;
+  margin: 0;
 }
 
 .search:focus {
@@ -146,11 +142,34 @@ body {
   background-color: var(--white);
 }
 
+.header-info-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 158px;
+  gap: 20px;
+}
+
+.header-company-description {
+  padding-left: 30px;
+  padding-top: 42.5px;
+}
+
+.list-user-menu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 46px;
+  padding-bottom: 67px;
+}
+
 .header-navigation {
   background-color: var(--background-special);
   color: var(--white);
   width: 940px;
   margin: 0 auto;
+  height: 60px;
 }
 
 .header-navigation .link:hover {
@@ -160,6 +179,14 @@ body {
 .header-navigation .link:active {
   background-color: var(--background-special-darkest);
   color: var(--white-transparent-05);
+}
+
+.header-navigation-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 53px;
+  padding-right: 53px;
+  padding-top: 16px;
 }
 
 .link-cart, .link-order, .link-bookmark  {
@@ -191,10 +218,15 @@ body {
   color: transparent;
 }
 
-.header-company-info .info-text {
+.header-company-description .info-text {
   color: var(--basic-red);
   font-family: var(--cuprum);
   font-style: italic;
+  margin: 0;
+}
+
+.header-contacts {
+  padding-top: 46px;
 }
 
 .link-phone-header {
@@ -203,7 +235,11 @@ body {
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
-  padding: 10px;
+  display: inline-block;
+  width: 270px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 8px;
 }
 
 .header-address {
@@ -212,6 +248,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: var(--background-special);
+  margin: 0;
 }
 
 .link-login, .link-signin {
@@ -223,9 +260,20 @@ body {
   background-color: var(--white);
   text-align: center;
   display: inline-block;
-  width: 150px;
   vertical-align: middle;
   padding: 12px;
+}
+
+.link-login {
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-right: 10px;
+}
+
+.link-signin {
+  padding-left: 19px;
+  padding-right: 27px;
+  margin-right: 0;
 }
 
 .link-login:hover, .link-signin:hover {
@@ -266,15 +314,15 @@ body {
 /* Main page -> Offers */
 
 .offers {
+  width: 940px;
   padding: 59px 0;
+  margin: 0 auto;
 }
 
 .offers-wrapper {
-  width: 940px;
-  margin: 0 auto;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 123px;
+  grid-template-rows: 123px 123px 123px;
   gap: 20px;
 }
 
@@ -328,10 +376,10 @@ body {
   background-color: var(--special-yellow);
 }
 
-/* здесь я пытаюсь разместить слайдер в сетке, но у меня не получается, даже если скрыть все выпирающие элементы, может нужно доработать слайдер? 
-но я совершенно не знаю, как :( */
 .slider {
-  grid-column: 1 / 2;
+  width: 620px;
+  height: 266px;
+  grid-column: 1 / 4;
   grid-row: 3 / 6;
 }
 
@@ -354,11 +402,18 @@ body {
 
 /* Main page -> Popular goods and brands */
 
+.popular-brands, .popular-goods {
+  width: 940px;
+  margin: 0 auto;
+}
+
 .popular-wrapper {
   background-color: var(--background-additional);
   width: 940px;
   margin: 0 auto;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .title-goods, .title-brands {
@@ -432,21 +487,27 @@ body {
 /* Main page -> Services */
 
 .services {
+  width: 940px;
+  margin: 0 auto;
   background-color: var(--basic-background);
 }
 
 .services-wrapper {
-  margin: 0 auto;
-  width: 940px;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 186px;
-  gap: 61px;
+  grid-template-rows: 186px 186px;
+  row-gap: 61px;
+  column-gap: 20px;
   padding-bottom: 89px;
 }
 
 .services-info {
   grid-column: 1 / -1;
+}
+
+.tab {
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
 }
 
 .title-section {
@@ -456,6 +517,12 @@ body {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--black);
+  margin-top: 29px;
+}
+
+.img-small-map {
+  margin-top: 32px;
+  margin-bottom: 25px;
 }
 
 .tab-title {
@@ -499,27 +566,27 @@ body {
 
 /* Main page -> Shop-info */
 
+.main-company-info {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 20px; 
+  margin: 0 auto;
+  width: 940px;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
 .delivery-companies {
   font-family: var(--cuprum);
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
   color: var(--black);  
+  margin-bottom: 20px;
 }
 
 .delivery-company::marker {
   content: url("img/dash.png");
-}
-
-.main-company-info {
-  margin: 0 auto;
-  width: 940px;
-  display: grid;
-  grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 352px;
-  column-gap: 20px;
-  margin-top: 79px;
-  margin-bottom: 70px;
 }
 
 .shop-info {
@@ -763,14 +830,57 @@ Current style based on pagination buttons styleguide. */
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  background-color: var(--background-special);  
 }
 
 .footer-wrapper {
-  background-color: var(--background-special);  
+  width: 940px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 60px) ;
+  grid-template-rows: 68px 50px;
+  gap: 20px;
+  padding-bottom: 54px;
+}
+.page-footer-logo {
+  grid-column: 1 / 6;
+  grid-row: 1 / 2;
+}
+
+.footer-navigation {
+  grid-column: 4 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 37px;
+}
+
+.link-footer-navigation {
+  margin-left: 58px;
+}
+
+.footer-contacts {
+  grid-column: 1 / 10;
+}
+
+.footer-address {
+  margin: 0;
+  padding-top: 5px;
+}
+
+.footer-submenu {
+  grid-column: 11 / -1;
+}
+
+.list-submenu {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 5px;
 }
 
 .footer-wrapper-lower {
   background-color: var(--background-special-dark);
+  padding-top: 36px;
 }
 
 .footer-lower {
@@ -778,8 +888,8 @@ Current style based on pagination buttons styleguide. */
   margin: 0 auto;
   display: grid;
   grid-template-columns: 300px 300px 300px;
-  grid-template-rows: 107px;
   gap: 20px;
+  padding-bottom: 29px;
 }
 
 .footer-contacts {
@@ -788,6 +898,7 @@ Current style based on pagination buttons styleguide. */
 
 .link-additional { 
   color: var(--special-yellowlight);
+  margin-left: 60px;
 }
 
 .link-footer-navigation:hover, .link-additional:hover {
@@ -799,20 +910,31 @@ Current style based on pagination buttons styleguide. */
   text-decoration: none;
 }
 
+.feedback {
+  margin-right: 51px;
+}
+
 .copyright, .title-feedback, .text-developed {
   font-size: 16px;
   line-height: 18px;
   color: var(--white);
+  font-weight: 400;
+  margin: 0;
 }
 
-.list-socials {
+.copyright-text {
+  margin: 0;
+}
+
+.list-social {
   width: 44px;
   height: 44px;
   background-color: var(--background-socials);
   border-radius: 50%;
+  margin-left: 3.5px;
 }
 
-.list-socials:hover, .list-socials:active {
+.list-social:hover, .list-social:active {
   background-color: var(--basic-red);
 }
 
@@ -848,6 +970,16 @@ Current style based on pagination buttons styleguide. */
   text-decoration: none; 
   color: var(--basic-red);
 }
+
+.list-socials {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-additional-info {
+  display: flex;
+  justify-content: flex-end;
+} 
 
 /* 
   Main page -> Modal 
