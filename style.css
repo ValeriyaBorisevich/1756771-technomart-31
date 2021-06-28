@@ -129,6 +129,7 @@ body {
   padding: 0 10px;
   display: flex;
   justify-content: space-between;
+  height: 42px;
 }
 
 /* здесь у меня сложность с тем, что список ссылок он же в отельном теге, поэтому некрасиво вышло с флексами в вперхней части хедера */
@@ -157,11 +158,14 @@ body {
   padding-top: 42.5px;
 }
 
+.user-menu {
+  padding-top: 46px;
+  padding-bottom: 67px;
+}
+
 .list-user-menu {
   display: flex;
   justify-content: flex-end;
-  padding-top: 46px;
-  padding-bottom: 67px;
 }
 
 .header-navigation {
@@ -302,6 +306,20 @@ body {
   line-height: 21px;
 }
 
+.logged-in {
+ display: flex;
+}
+
+.user-name {
+  padding: 0;
+  margin: 0;
+}
+
+.logged-in-submenu {
+  display: flex;
+  justify-content: space-around;
+}
+
 .link-user:active {
   color: var(--basic-greylight);
 }
@@ -407,6 +425,10 @@ body {
 
 
 /* Main page -> Popular goods and brands */
+
+.goods {
+  grid-column: 2 / -1;
+}
 
 .popular-brands, .popular-goods {
   width: 940px;
@@ -600,11 +622,21 @@ body {
 
 /* Breadcrambs */
 
+.breadcrambs {
+  width: 940px;
+  margin: 0 auto;
+  padding-left: 10px;
+  display: flex;
+  margin-top: 21px;
+  margin-bottom: 20px;
+}
+
 .breadcrambs-link {
   color: var(--black);
   text-transform: uppercase;
   font-size: 13px;
   line-height: 18px;
+  margin-right: 41px;
 }
 
 /*There are no specific styleguide instructions for breadcrambs link states.
@@ -633,6 +665,10 @@ Current style based on login and signin buttons styleguide. */
 
 .catalog-title-wrapper {
   background-color: var(--basic-background);
+  height: 89px;
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .catalog-title {
@@ -642,9 +678,42 @@ Current style based on login and signin buttons styleguide. */
   line-height: 30px;
   text-transform: uppercase;
   font-weight: 400;
+  padding-left: 29px;
+  padding-top: 29px;
+  padding-bottom: 30px;
+}
+
+.catalog-main-content {
+  display: grid;
+  grid-template-columns: 220px 700px;
+  grid-template-rows: 38px 100%;
+  gap: 21px;
+  width: 940px;
+  margin: 0 auto;
+  margin-bottom: 59px;
 }
 
 /* Catalog -> Filter and Sorting */
+
+.sorting {
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+}
+
+.sorting-categories {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sorting-order {
+  display: flex;
+}
+
+.filter {
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+}
 
 .filter-title, .sorting-title {
   font-size: 13px;
@@ -661,6 +730,14 @@ Current style based on login and signin buttons styleguide. */
   background-color: var(--background-catalog);
 }
 
+.filter-title {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  margin: 0;
+  width: 202px;
+}
 
 .filter-pricerange,
 .filter-brand,
@@ -684,6 +761,8 @@ Current style based on login and signin buttons styleguide. */
   text-transform: uppercase;
   font-size: 17px;
   line-height: 30px;  
+  margin-top: 14.5px;
+  margin-bottom: 10.85px;
 }
 
 .filter-brand, .filter-price {
@@ -691,10 +770,32 @@ Current style based on login and signin buttons styleguide. */
   width: 220px;
 }
 
+.filter-price {
+  padding-bottom: 25px;
+}
+
+.filter-brand {
+  padding-top: 16px;
+  padding-bottom: 26px;
+}
+
+.filter-chargertype {
+  padding-top: 18px;
+}
+
+.filter-brand-items {
+  margin-top: 15px;
+}
+
+.filter-chargertype-items {
+  margin-top: 20.85px;
+}
+
 .filter-brand-item, .filter-chargertype-item {
   font-size: 15px;
   line-height: 19px;  
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .button-show {
@@ -705,6 +806,7 @@ Current style based on login and signin buttons styleguide. */
   background-color: var(--white);
   width: 220px;
   padding: 10px;
+  margin-top: 34.15px;
 } 
 
 .sorting-category {
@@ -740,6 +842,13 @@ Current style based on login and signin buttons styleguide. */
 }
 
 /* Catalog -> Goods */
+
+.list-goods {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  gap: 20px;
+  grid-template-rows: repeat(3, 318px);
+}
 
 .button-to-buy {
   background-color: var(--basic-green);
@@ -786,6 +895,17 @@ Current style based on login and signin buttons styleguide. */
 
 /* Pagination */
 
+.pagination {
+  display: flex;
+  margin: 0 auto;
+  width: 940px;
+}
+
+.list-pagination {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .button-pagination {
   border: 1px solid var(--border-grey-light);
   border-radius: 2px;
@@ -793,8 +913,13 @@ Current style based on login and signin buttons styleguide. */
   color: var(--black);
   font-size: 13px;
   line-height: 18px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 9px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.button-pagination-next {
+  width: 100%;
 }
 
 /* There are no specific styleguide instructions for button-show states.
@@ -828,6 +953,14 @@ Current style based on pagination buttons styleguide. */
   background-color: var(--basic-background);
 }
 
+.perforator-info-wrapper {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+  padding-top: 64px;
+  padding-bottom: 68px;
+}
+
 /* Footer */
 
 .page-footer {
@@ -843,12 +976,11 @@ Current style based on pagination buttons styleguide. */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 60px) ;
-  grid-template-rows: 68px 50px;
   gap: 20px;
   padding-bottom: 54px;
 }
 .page-footer-logo {
-  grid-column: 1 / 6;
+  grid-column: 1 / 4;
   grid-row: 1 / 2;
 }
 
@@ -865,7 +997,7 @@ Current style based on pagination buttons styleguide. */
 }
 
 .footer-contacts {
-  grid-column: 1 / 10;
+  grid-column: 1 / 6;
 }
 
 .footer-address {
@@ -874,12 +1006,13 @@ Current style based on pagination buttons styleguide. */
 }
 
 .footer-submenu {
-  grid-column: 11 / -1;
+  grid-column: 6 / -1;
 }
 
 .list-submenu {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
   padding-top: 5px;
 }
 
@@ -892,9 +1025,10 @@ Current style based on pagination buttons styleguide. */
   width: 940px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 300px 300px 140px 140px;
   gap: 20px;
   padding-bottom: 29px;
+
 }
 
 .footer-contacts {
@@ -903,7 +1037,6 @@ Current style based on pagination buttons styleguide. */
 
 .link-additional { 
   color: var(--special-yellowlight);
-  margin-left: 60px;
 }
 
 .link-footer-navigation:hover, .link-additional:hover {
@@ -927,8 +1060,16 @@ Current style based on pagination buttons styleguide. */
   margin: 0;
 }
 
+.title-feedback {
+  width: 140px;
+}
+
 .copyright-text {
   margin: 0;
+}
+
+.developed {
+  padding-left: 29px;
 }
 
 .list-social {
